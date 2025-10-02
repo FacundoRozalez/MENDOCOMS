@@ -1,0 +1,528 @@
+/* ====== Estilos generales ====== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #000;
+}
+#btnVolver {
+  display: none; /* oculto al inicio */
+}
+
+/* ====== Header ====== */
+header {
+  display: flex;
+  flex-direction: column; /* Logo arriba, nav debajo */
+  align-items: center;
+  width: 100%;
+  padding: 0; /* Sin padding para que la imagen toque los bordes */
+  background: #fff;
+}
+
+/* Logo full width deformable */
+header .logo img {
+  width: 100%;      /* Ocupa todo el ancho */
+  height: 200px;    /* Altura fija que quieras */
+  display: block;   /* Elimina espacios debajo */
+  margin: 40px 0;        /* Sin margen */
+  object-fit: fill; /* Fuerza deformación si es necesario */
+}
+
+/* Nav centrado debajo del logo */
+nav {
+  display: flex;
+  justify-content: center; /* centra los enlaces */
+  gap: 20px;
+  padding: 15px 0;
+  width: 100%; /* ocupa todo el ancho */
+  background: linear-gradient(to right, #a30d0d, #2e84a7); /* gradiente */
+  box-sizing: border-box; /* incluye padding dentro del ancho */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+/* ====== Secciones ====== */
+.seccion {
+  padding:0px 0px 40px 0px;
+  text-align: center;
+  
+}
+#tituloRevista{
+  margin-top: 0;
+}
+
+.seccion h2 {
+  position: relative;
+  text-align: center;
+  margin: 40px 0;          /* espacio arriba y abajo */
+  padding: 10px 0;         /* espacio interno */
+  width: 100%;            /* ancho de la pantalla */
+  border-top: 2px solid #007BFF;
+  border-bottom: 2px solid #007BFF;
+  box-sizing: border-box;  /* incluye padding en el ancho */
+  font-size: 28px;
+  background: linear-gradient(to right, #a30d0d, #2e84a7);
+  color: #fff;
+}
+
+/* ====== Revista del Mes ====== */
+
+
+#revista-mes .revista-mes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;   /* tamaño máximo de la portada */
+  margin: 0 auto;     /* centrado horizontal */
+  cursor: pointer;
+  /* background: #fff; */
+  background: linear-gradient(to right, #a30d0d, #2e84a7);
+
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  padding: 15px;
+  transition: transform 0.3s ease;
+  
+}
+
+#revista-mes .revista-mes:hover {
+  transform: scale(1.05);
+}
+
+#revista-mes .revista-mes img.portada {
+  width: 100%;
+  height: auto;
+  max-height: 500px;  /* límite opcional */
+  /* object-fit: contain; */
+  border-radius: 6px;
+}
+
+#revista-mes .revista-mes span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 26px;
+  color: #f4f4f4;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+
+}
+
+.ediciones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 30px; /* espacio entre tarjetas */
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.ediciones .tarjeta {
+  /* background: #fff; */
+  background: linear-gradient(to right, #a30d0d, #2e84a7);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+  height: auto; /* altura automática según contenido */
+}
+
+.ediciones .tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.ediciones .tarjeta img.mini-portada {
+  width: 100%;
+  height: auto;    /* mantiene proporción real */
+  max-height: 400px; /* opcional: limitar alto si querés uniformidad */
+  object-fit: contain; /* no recorta la imagen */
+  border-radius: 4px;
+}
+
+.ediciones .tarjeta span {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #f4f4f4;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  font-size: 20px;
+  text-align: center;
+}
+
+/* ====== Carrusel de anuncios ====== */
+.carrusel-estatico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 80px 0;
+}
+
+.carrusel-estatico button {
+  background: linear-gradient(to right, #a30d0d, #2e84a7);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.carrusel-estatico button:hover {
+  background: #125aa3;
+}
+
+.carrusel-estatico .tarjeta {
+  width: 420px;          /* ancho fijo */
+  height: 500px;         /* alto fijo */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* contenido arriba hacia abajo */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: linear-gradient(to right, #a30d0d, #2e84a7);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* Contenedor de imagen con altura fija */
+.carrusel-estatico .tarjeta img {
+  width: 100%;
+  height: 350px;        /* altura fija para que no afecte nombre/botones */
+  object-fit: contain;    /* mantiene proporción y cubre el área */
+  border-radius: 6px;
+  flex-shrink: 0;       /* no se reduce */
+  background: linear-gradient(to right, #a30d0d, #2e84a7);
+
+}
+
+/* Nombre del comercio: siempre 2 líneas */
+.carrusel-estatico .tarjeta h4 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.2em;
+  height: 2.4em;       /* espacio para 2 líneas exactas */
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  background: rgba(0,0,0,0.4);
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  margin: 10px 0 5px;
+}
+
+/* Botones siempre abajo */
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;    /* empuja los botones al fondo */
+}
+
+.acciones a {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px 12px;
+  border-radius: 12px;             /* bordes más redondeados */
+  text-decoration: none;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;                        /* espacio entre icono y texto */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* sombra suave */
+}
+
+/* Botón WhatsApp */
+.acciones a:first-child {
+  background: linear-gradient(135deg, #25D366, #1DA851);
+  border: 1px solid #1DA851;
+}
+
+/* Botón Ubicación */
+.acciones a:last-child {
+  background: linear-gradient(135deg, #1976D2, #1565C0);
+  border: 1px solid #1565C0;
+}
+
+/* Hover efecto “pop” */
+.acciones a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  opacity: 0.95;
+}
+
+/* Opcional: íconos dentro de los botones */
+.acciones a img {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* Modal básico */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-contenido {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#caption {
+  text-align: center;
+  color: #fff;
+  padding: 10px 0;
+}
+
+/* ====== Sección Servicios ====== */
+
+
+
+/* Lista de servicios */
+#servicios ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+/* Ítems de la lista */
+#servicios ul li {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover efecto sutil */
+#servicios ul li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Opcional: ícono al inicio de cada servicio */
+#servicios ul li::before {
+  content: "✔";                /* checkmark profesional */
+  color: #2e84a7;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+
+/* ====== Footer ====== */
+footer {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #424242;
+}
+
+/* ====== Botón flotante WhatsApp ====== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.whatsapp-float img {
+  width: 22px;
+  height: 22px;
+  filter: invert(1);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+  background: #20b955;
+}
+
+
+/* ====== Sección Nosotros ====== */
+#nosotros p {
+  font-size: 18px;          /* tamaño legible */
+  line-height: 1.7;         /* buena lectura */
+  color: #333;              /* texto oscuro y elegante */
+  text-align: center;      /* párrafo justificado */
+  margin: 15px 0;           /* espacio arriba y abajo */
+  letter-spacing: 0.5px;    /* ligero espaciado entre letras */
+}
+
+
+#contacto p {
+  font-size: 18px;
+  color: #333;
+  margin: 15px 0;
+}
+
+#contacto a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* WhatsApp */
+#contacto a.whatsapp {
+  background: linear-gradient(135deg, #25D366, #1DA851);
+  border: 1px solid #1DA851;
+}
+
+#contacto a.whatsapp:hover {
+  background: #128C7E;
+  transform: translateY(-3px);
+}
+
+/* Correo */
+#contacto a.correo {
+  background: linear-gradient(135deg, #1a73e8, #155ab6);
+  border: 1px solid #155ab6;
+}
+
+#contacto a.correo:hover {
+  background: #0c52b2;
+  transform: translateY(-3px);
+}
+
+/* Íconos dentro de los botones */
+#contacto a img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: invert(1); /* convierte el ícono negro en blanco */
+}
+
+/* ====== Flipbook ====== */
+.iframe-container {
+  display: none;
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto 40px;
+  padding-top: 60%;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.volver {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #a30d0d, #2e84a7);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.volver:hover {
+  background: #0056b3;
+}
+  
+  
+  /* ====== Responsivo ====== */
+  @media (max-width: 1024px) {
+    .ediciones { grid-template-columns: repeat(3, 1fr); }
+  }
+  
+  @media (max-width: 768px) {
+    .ediciones { grid-template-columns: repeat(2, 1fr); }
+    .carrusel-estatico .tarjeta { flex: 0 0 200px; }
+    .acciones a { font-size: 12px; padding: 5px 6px; }
+  }
+  
+  @media (max-width: 480px) {
+    .ediciones { grid-template-columns: 1fr; }
+    .seccion { padding: 30px 15px; }
+    .carrusel-estatico .tarjeta { flex: 0 0 160px; }
+    .acciones a { font-size: 11px; padding: 4px 5px; }
+    .whatsapp-float { padding: 10px 14px; font-size: 14px; }
+    nav { gap: 5px; }
+  }

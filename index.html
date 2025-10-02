@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Revista MENDOCOMS</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#revista">Ediciones</a>
+    <a href="#carrusel">Comercios</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contácto</a>
+  </nav>
+  <div class="logo">
+    <!-- <a href=""> -->
+      <img src="img/logo/Logo.png" alt="Logo Revista RODECOM">
+    <!-- </a> -->
+  </div>
+</header>
+
+<!-- Secciones -->
+ 
+<!-- Revista del Mes -->
+<section id="revista-mes" class="seccion" data-pdf="https://online.fliphtml5.com/nrfpr/kzfi/">
+  <h2 id="tituloRevista">Revista del Mes</h2>
+  <div class="revista-mes" >
+    <img src="img/portada/septiembre2025.png" alt="Septiembre 2025" class="portada">
+    <span>Septiembre 2025</span>
+  </div>
+</section>
+
+  
+<!-- Revista Digital -->
+<section id="revista" class="seccion">
+  <h2>Ediciones 2025</h2>
+
+  <div class="ediciones" id="edicionesGrid">
+    <!-- <div class="tarjeta" data-pdf="https://online.fliphtml5.com/nrfpr/xlgc/">
+      <img src="ediciones/septiembre2025/pagina2.png" alt="Enero 2025" class="mini-portada">
+      <span>Enero 2025</span>
+    </div>
+    <div class="tarjeta" data-pdf="https://online.fliphtml5.com/nrfpr/kzfi/">
+      <img src="ediciones/septiembre2025/pagina3.png" alt="Febrero 2025" class="mini-portada">
+      <span>Febrero 2025</span>
+    </div>
+    <div class="tarjeta" data-pdf="https://online.fliphtml5.com/nrfpr/kzfi/">
+      <img src="ediciones/septiembre2025/pagina4.png" alt="Marzo 2025" class="mini-portada">
+      <span>Marzo 2025</span>
+    </div>
+    <div class="tarjeta" data-pdf="https://online.fliphtml5.com/nrfpr/kzfi/">
+      <img src="ediciones/septiembre2025/pagina5.png" alt="Abril 2025" class="mini-portada">
+      <span>Abril 2025</span>
+    </div>
+    <div class="tarjeta" data-pdf="https://online.fliphtml5.com/nrfpr/kzfi/">
+      <img src="ediciones/septiembre2025/pagina6.png" alt="Mayo 2025" class="mini-portada">
+      <span>Mayo 2025</span>
+    </div> -->
+    <div class="tarjeta" data-pdf="https://online.fliphtml5.com/nrfpr/xnap/">
+      <img src="img/portada/junio2025.png" alt="Junio 2025" class="mini-portada">
+      <span>Junio 2025</span>
+    </div>
+    <div class="tarjeta" data-pdf="https://online.fliphtml5.com/nrfpr/mqgp/">
+      <img src="img/portada/julio2025.png" alt="Julio 2025" class="mini-portada">
+      <span>Julio 2025</span>
+    </div>
+    <div class="tarjeta" data-pdf="https://online.fliphtml5.com/nrfpr/nzjr/">
+      <img src="img/portada/agosto2025.png" alt="Agosto 2025" class="mini-portada">
+      <span>Agosto 2025</span>
+    </div>
+    <div class="tarjeta" data-pdf="https://online.fliphtml5.com/nrfpr/kzfi/">
+      <img src="img/portada/septiembre2025.png" alt="Septiembre 2025" class="mini-portada">
+      <span>Septiembre 2025</span>
+    </div>
+    <!-- <div class="tarjeta" data-pdf="https://online.fliphtml5.com/nrfpr/kzfi/">
+      <img src="ediciones/septiembre2025/pagina10.png" alt="Octubre 2025" class="mini-portada">
+      <span>Octubre 2025</span>
+    </div>
+    <div class="tarjeta" data-pdf="https://online.fliphtml5.com/nrfpr/kzfi/">
+      <img src="ediciones/septiembre2025/pagina5.png" alt="Noviembre 2025" class="mini-portada">
+      <span>Noviembre 2025</span>
+    </div>
+    <div class="tarjeta" data-pdf="https://online.fliphtml5.com/nrfpr/kzfi/">
+      <img src="ediciones/septiembre2025/pagina2.png" alt="Diciembre 2025" class="mini-portada">
+      <span>Diciembre 2025</span>
+    </div> -->
+  </div>
+</section>
+
+<section>
+  <!-- Flipbook -->
+  <div class="iframe-container" id="flipbookContainer">
+    <iframe id="flipbookIframe" src="" allowfullscreen scrolling="no"></iframe>
+  </div>
+  
+  <button class="volver" id="btnVolver">Volver a ediciones</button>
+</section>
+  
+
+  <!-- Carrusel de anuncios -->
+<section id="carrusel" class="seccion">
+  <h2>Comercios</h2>
+  <div class="carrusel-estatico">
+    <button id="prevBtn">⟨</button>
+    <div id="tarjetaActual"></div>
+    <button id="nextBtn">⟩</button>
+  </div>
+</section>
+
+<!-- Modal para imagen ampliada -->
+<div id="modalImagen" class="modal">
+  <span id="cerrarModal" class="cerrar">&times;</span>
+  <img class="modal-contenido" id="imgModal">
+  <div id="caption"></div>
+</div>
+
+<section id="servicios" class="seccion">
+  <h2>Servicios</h2>
+  <ul>
+    <li>Espacios publicitarios en revista impresa</li>
+    <li>Publicidad digital interactiva con enlaces directos</li>
+    <li>Diseño y edición de anuncios personalizados</li>
+    <li>Difusión en redes sociales y medios digitales</li>
+    <li>Distribución estratégica en puntos de alto tránsito local</li>
+    <li>Promoción mediante códigos QR para acceso inmediato a la versión digital</li>
+    <li>Asesoría en comunicación y posicionamiento de marca</li>
+    <li>Ediciones especiales temáticas para campañas o temporadas</li>
+  </ul>
+</section>
+
+<section id="nosotros" class="seccion">
+  <h2>Sobre Nosotros</h2>
+    <p>Somos una revista creada para brindar a los comercios un espacio publicitario confiable y accesible. Nuestro propósito es conectar a las marcas con su comunidad, generando valor a través de una comunicación clara, cercana y orientada a las personas.</p>
+</section>
+
+<!-- Contacto -->
+<section id="contacto" class="seccion">
+  <h2>Contácto</h2>
+  <a href="https://wa.me/5491122334455" target="_blank" class="whatsapp">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+    Contáctanos por WhatsApp
+  </a>
+  <a href="mailto:info@revista.com" class="correo">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Correo">
+    Envíanos un correo
+  </a>
+</section>
+
+
+<footer>
+  <p>&copy; 2025 Revista MENDOCOMS - Todos los derechos reservados</p>
+</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/5491122334455?text=Hola%20quiero%20anunciar%20en%20la%20revista" 
+   class="whatsapp-float" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+  <span>Contáctenos para anunciar</span>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
