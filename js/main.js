@@ -87,7 +87,7 @@ function abrirFlipbook(url) {
 // Función para cerrar flipbook y mostrar secciones
 function cerrarFlipbook() {
     revistaMes.style.display = 'block';
-    ediciones.style.display = 'flex'; 
+    ediciones.style.display = 'grid'; 
     h2Ediciones.style.display = 'block'; // mostramos el h2
     flipbookContainer.style.display = 'none';
     flipbookIframe.src = '';
